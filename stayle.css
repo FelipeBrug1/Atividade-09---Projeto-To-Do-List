@@ -1,0 +1,82 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: azure;
+    text-align: center;
+}
+
+.container{
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgb(179, 207, 17);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: -6px -5px 24px 0px rgba(0,0,0,0.75);
+}
+
+h1{
+    margin-bottom: 18px;
+    color: rgb(102, 24, 24);
+    text-shadow:  -7px -20px 5px rgba(90,85,85,0.67);
+}
+
+img{
+    width: 20px;
+}
+
+.input-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#task-input{
+    flex: 1;
+    padding: 8px;
+}
+
+button{
+    padding: 8px;
+    cursor: pointer;
+    background-color: rgb(97, 145, 95);
+    color: rgb(38, 83, 40);
+    border-radius: 9px;
+    border: 2x solid #7c3f3f;
+}
+
+.filters{
+    display: flex;
+    gap: 20px;
+}  
+
+
+.filter{
+    margin: 5px;
+    background-color: aqua;
+    color: #4d1414;
+    flex: 1;
+}
+
+ul{
+    list-style: nome;
+    pedding: 0px;
+    color: #7a6666;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    background-color: #aaa;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+.completed{
+    text-decoration: line-through;
+    color:darkolivegreen 
+}
+
+.dark-mode{
+    background-color: rgb(12, 10, 10);
+}
