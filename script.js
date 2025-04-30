@@ -49,16 +49,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
             li.innerHTML = `
                 <span class="task-text">${task.text}</span>
-                <button class="edit"><img class="btnTasks" src="assets/editar.png"></button>
-                <button class="delete"><img class="btnTasks" src="assets/excluir.png"></button>
+                <button class="edit"><img class="btnTasks edit" src="assets/editar.png"></button>
+                <button class="delete"><img class="btnTasks delete" src="assets/excluir.png"></button>
 
             `;
 
             li.addEventListener("click", function(e) {
                 if (e.target.classList.contains("delete")){
-                    task.splice(index, 1);
+                    tasks.splice(index, 1);
                 } else if (e.target.classList.contains("edit")){
-                    const newText = promt("Editar tarefa:", task.text);
+                    const newText = prompt("Editar tarefa:", task.text);
                     if (newText) tasks[index].text = newText;
                 } else {
                     if(tasks[index].completed === true){
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 }
                 saveTasks();
-                renderTesks(filter);
+                renderTasks(filter);
             });
 
             taskList.appendChild(li);
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (text) {
             tasks.push({ text: text, completed: false});
             saveTasks();
-            renderTesks(); // atualiza a lista
+            renderTasks(); // atualiza a lista
             taskInput.value = "";
         };
     });
@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 btn.classList.remove("active");
             });
             button.classList.add("active");
-            renderTesks(button.dataset.filter);
+            renderTasks(button.dataset.filter);
         });
     });
-    renderTesks();
+    renderTasks();
 
 });
